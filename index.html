@@ -3,58 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eBPF'26 — Call for Papers</title>
+    <title>eBPF'26 — Workshop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="sidebar">
         <div class="sidebar-header">
-            <a href="index.html" class="brand">eBPF'26</a>
+            <a href="#home" class="brand">eBPF'26</a>
             <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#" class="active">Call for Papers</a></li>
-            <li><a href="#">Dates</a></li>
-            <li><a href="#">Organizers</a></li>
-            <li class="nav-divider">Past Workshops</li>
-            <li><a href="https://ebpf.github.io/2025/">eBPF'25</a></li>
-            <li><a href="https://ebpf.github.io/2024/">eBPF'24</a></li>
-            <li><a href="https://ebpf.github.io/2023/">eBPF'23</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="#dates">Dates</a></li>
+            <li><a href="#organizers">Organizers</a></li>
         </ul>
     </nav>
 
     <main class="content">
-        <header>
-            <h1>Call for Papers</h1>
-        </header>
+        <section id="home">
+            <h1>eBPF'26 Workshop</h1>
+            <p>Welcome to the 2026 Workshop on eBPF. This event brings together researchers and practitioners to discuss the latest advancements in kernel extensibility, safety, and performance.</p>
+            <p>The workshop will be held in conjunction with SOSP 2026.</p>
+        </section>
 
-        <section>
+        <section id="cfp">
+            <h2>Call for Papers</h2>
             <p>Kernel extensions are seeing a renewed interest in the research community with the advent of eBPF (extended Berkeley Packet Filter). eBPF has been gaining popularity in industry for its safety and efficiency in programming end-host network and OS stacks.</p>
             
-            <p>The workshop will bring together a diverse and interdisciplinary audience to learn, network, and exchange ideas. We welcome contributions including, but not limited to:</p>
-            
+            <p>We welcome contributions including, but not limited to:</p>
             <ul>
                 <li>Better approaches to eBPF program safety verification.</li>
                 <li>Emerging use cases in networking, security, and CPU scheduling.</li>
                 <li>Techniques to optimize performance of eBPF programs.</li>
                 <li>Security implications of kernel extensions.</li>
-                <li>Case studies and real-world deployments.</li>
             </ul>
+
+            <h3>Submission Instructions</h3>
+            <p>We are looking for research papers (up to 6 pages) and poster abstracts (up to 2 pages). Please submit your papers via <a href="https://ebpf26.hotcrp.com" target="_blank">ebpf26.hotcrp.com</a>.</p>
         </section>
 
-        <section>
-            <h2>Submission Instructions</h2>
-            <p>We are looking for two types of submissions:</p>
-            <ul>
-                <li><strong>Research papers:</strong> Up to 6 pages. Submissions must be original, unpublished work.</li>
-                <li><strong>Poster abstracts:</strong> Up to 2 pages. Designed for early-stage findings and works in progress.</li>
-            </ul>
-            <p>Please submit your papers via <a href="https://ebpf26.hotcrp.com">ebpf26.hotcrp.com</a>.</p>
-        </section>
-
-        <section>
+        <section id="dates">
             <h2>Important Dates</h2>
             <table class="dates-table">
                 <thead>
@@ -84,15 +74,34 @@
             </table>
         </section>
 
+        <section id="organizers">
+            <h2>Organizers</h2>
+            <ul>
+                <li><strong>Program Chair:</strong> Jane Doe (University of Technology)</li>
+                <li><strong>Web Chair:</strong> John Smith (Systems Lab)</li>
+                <li><strong>Technical Committee:</strong> To be announced.</li>
+            </ul>
+        </section>
+
         <footer>
             <p>Last updated on March 5, 2026.</p>
         </footer>
     </main>
 
     <script>
-        // Simple script to toggle mobile menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('show');
+        // Toggle mobile menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
         });
     </script>
 </body>
