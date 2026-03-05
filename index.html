@@ -1,84 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eBPF'26 — Workshop</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="brand">eBPF'26</a>
-            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cfp">Call for Papers</a></li>
-                <li><a href="#dates">Dates</a></li>
-                <li><a href="#organizers">Organizers</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="content">
-        <section id="home">
-            <h1>eBPF'26 Workshop</h1>
-            <p>Welcome to the 2026 Workshop on eBPF. This event brings together researchers and practitioners to discuss the latest advancements in kernel extensibility, safety, and performance.</p>
-            <p>The workshop will be held in conjunction with SOSP 2026.</p>
-        </section>
-
-        <section id="cfp">
-            <h2>Call for Papers</h2>
-            <p>Kernel extensions are seeing a renewed interest in the research community with the advent of eBPF. This workshop serves as a premier venue for exchange between industry and academia.</p>
-            <h3>Submission Instructions</h3>
-            <p>Please submit your papers via <a href="https://ebpf26.hotcrp.com" target="_blank">ebpf26.hotcrp.com</a>.</p>
-        </section>
-
-        <section id="dates">
-            <h2>Important Dates</h2>
-            <table class="dates-table">
+<section id="schedule" class="section">
+    <div class="container">
+        <h2>Technical Program</h2>
+        <p>The workshop will take place on <strong>Monday, August 24, 2026</strong>. All times are in Central European Summer Time (CEST).</p>
+        
+        <div class="schedule-table-wrapper">
+            <table class="schedule-table">
                 <thead>
                     <tr>
-                        <th>Event</th>
-                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Session</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Submission deadline</td><td>June 19, 2026</td></tr>
-                    <tr><td>Author notification</td><td>July 24, 2026</td></tr>
-                    <tr><td>Camera-ready deadline</td><td>August 7, 2026</td></tr>
-                    <tr><td>Workshop</td><td>September 29, 2026</td></tr>
+                    <tr>
+                        <td>09:00 - 09:15</td>
+                        <td class="session-type">Opening</td>
+                        <td>Opening Remarks from the Chairs</td>
+                    </tr>
+                    <tr class="keynote">
+                        <td>09:15 - 10:15</td>
+                        <td class="session-type">Keynote</td>
+                        <td><strong>Scaling the Unscalable: Future Network Architectures</strong><br><em>Speaker: Prof. Elena Rossi (ETH Zürich)</em></td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 10:45</td>
+                        <td class="session-type">Break</td>
+                        <td>Morning Coffee & Networking</td>
+                    </tr>
+                    <tr>
+                        <td>10:45 - 12:15</td>
+                        <td class="session-type">Technical Session I</td>
+                        <td>
+                            <strong>Programmable Data Planes</strong>
+                            <ul>
+                                <li><em>Paper 1:</em> P4-Driven Congestion Control in Terabit Networks</li>
+                                <li><em>Paper 2:</em> State Management in Disaggregated Switches</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12:15 - 13:30</td>
+                        <td class="session-type">Lunch</td>
+                        <td>Lunch Break (On-site)</td>
+                    </tr>
+                    <tr>
+                        <td>13:30 - 15:00</td>
+                        <td class="session-type">Technical Session II</td>
+                        <td>
+                            <strong>AI in Networking</strong>
+                            <ul>
+                                <li><em>Paper 3:</em> Reinforcement Learning for Dynamic Routing</li>
+                                <li><em>Paper 4:</em> Anomaly Detection in Encrypted Traffic Streams</li>
+                            </ul>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
-        </section>
-
-        <section id="organizers">
-            <h2>Organizers</h2>
-            <ul>
-                <li><strong>Program Chair:</strong> Jane Doe (University of Technology)</li>
-                <li><strong>Web Chair:</strong> John Smith (Systems Lab)</li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>Last updated on March 5, 2026.</p>
-        </footer>
-    </main>
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('show');
-            });
-        });
-    </script>
-</body>
-</html>
+        </div>
+    </div>
+</section>
