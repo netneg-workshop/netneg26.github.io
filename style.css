@@ -9,29 +9,32 @@ line-height:1.6;
 /* header */
 
 .header{
+padding:25px 20px;
 border-bottom:1px solid #ddd;
-padding:20px 0;
 }
 
 .header h1{
 margin:0;
 font-size:28px;
+}
+
+/* horizontal navigation bar */
+
+.topnav{
+background:#2c5aa0;
+display:flex;
 padding-left:20px;
 }
 
-.nav{
-padding:10px 20px;
-}
-
-.nav a{
-margin-right:20px;
+.topnav a{
+color:white;
+padding:14px 18px;
 text-decoration:none;
-color:#0645ad;
 font-weight:500;
 }
 
-.nav a:hover{
-text-decoration:underline;
+.topnav a:hover{
+background:#1f3f73;
 }
 
 /* content */
@@ -45,11 +48,7 @@ padding:20px;
 h2{
 margin-top:40px;
 border-bottom:1px solid #ddd;
-padding-bottom:5px;
-}
-
-h3{
-margin-top:25px;
+padding-bottom:6px;
 }
 
 table{
@@ -57,15 +56,9 @@ border-collapse:collapse;
 margin-top:10px;
 }
 
-td, th{
+td{
 padding:8px 12px;
 border-bottom:1px solid #eee;
-}
-
-/* schedule table */
-
-.schedule th{
-text-align:left;
 }
 
 /* footer */
@@ -83,13 +76,12 @@ color:#666;
 
 @media(max-width:700px){
 
-.header h1{
-font-size:22px;
+.topnav{
+flex-wrap:wrap;
 }
 
-.nav a{
-display:inline-block;
-margin-bottom:8px;
+.topnav a{
+padding:10px;
 }
 
 .container{
