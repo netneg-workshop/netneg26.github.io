@@ -10,90 +10,118 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-<h1>Workshop on Example Systems (WES 2026)</h1>
+  <h1>Workshop on Example Systems (WES 2026)</h1>
 </header>
 
+<!-- STICKY NAVIGATION -->
 <nav class="topnav">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#cfp">CFP</a>
-<a href="#organizers">Organizers</a>
+  <a href="#home" class="active">Home</a>
+  <a href="#about">About</a>
+  <a href="#cfp">CFP</a>
+  <a href="#organizers">Organizers</a>
 </nav>
 
+<!-- MAIN CONTENT -->
 <div class="container">
 
-<section id="home">
+  <!-- HOME SECTION -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>
+      The Workshop on Example Systems (WES 2026) brings together researchers
+      and practitioners interested in modern systems, networking, and infrastructure.
+    </p>
+  </section>
 
-<h2>Home</h2>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      This workshop aims to foster discussion on emerging ideas and practical
+      deployments in modern computing systems. Participants will present research,
+      share experiences, and collaborate on future directions.
+    </p>
+  </section>
 
-<p>
-The Workshop on Example Systems (WES 2026) brings together researchers
-and practitioners interested in systems, networking, and infrastructure.
-</p>
+  <!-- CFP SECTION -->
+  <section id="cfp">
+    <h2>Call for Papers</h2>
+    <p>
+      We invite submissions describing original research, experience reports,
+      and position papers related to the workshop topics.
+    </p>
 
-</section>
+    <h3>Topics of Interest</h3>
+    <ul>
+      <li>Systems performance and optimization</li>
+      <li>Kernel extensions and programmability</li>
+      <li>Networking and observability</li>
+      <li>Security and verification</li>
+      <li>Production deployments and case studies</li>
+    </ul>
 
+    <h3>Important Dates</h3>
+    <table>
+      <tr>
+        <td>Submission deadline</td>
+        <td>June 15, 2026</td>
+      </tr>
+      <tr>
+        <td>Notification</td>
+        <td>July 20, 2026</td>
+      </tr>
+      <tr>
+        <td>Camera-ready deadline</td>
+        <td>August 5, 2026</td>
+      </tr>
+      <tr>
+        <td>Workshop date</td>
+        <td>September 2026</td>
+      </tr>
+    </table>
+  </section>
 
-<section id="about">
-
-<h2>About</h2>
-
-<p>
-This workshop aims to foster discussion on emerging ideas and practical
-deployments in modern computing systems.
-</p>
-
-</section>
-
-
-<section id="cfp">
-
-<h2>Call for Papers</h2>
-
-<p>
-We invite submissions describing original research and experience reports.
-</p>
-
-<h3>Important Dates</h3>
-
-<table>
-<tr>
-<td>Submission deadline</td>
-<td>June 15, 2026</td>
-</tr>
-
-<tr>
-<td>Notification</td>
-<td>July 20, 2026</td>
-</tr>
-
-<tr>
-<td>Workshop</td>
-<td>September 2026</td>
-</tr>
-</table>
-
-</section>
-
-
-<section id="organizers">
-
-<h2>Organizers</h2>
-
-<ul>
-<li>Jane Doe – University A</li>
-<li>John Smith – University B</li>
-<li>Alex Lee – Institute C</li>
-</ul>
-
-</section>
+  <!-- ORGANIZERS SECTION -->
+  <section id="organizers">
+    <h2>Organizers</h2>
+    <ul>
+      <li>Jane Doe – University A</li>
+      <li>John Smith – University B</li>
+      <li>Alex Lee – Institute C</li>
+    </ul>
+  </section>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 WES Workshop</p>
+  <p>© 2026 WES Workshop</p>
 </footer>
+
+<!-- ACTIVE SECTION HIGHLIGHT SCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".topnav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
