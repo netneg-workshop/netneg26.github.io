@@ -1,74 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Workshop 2026</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workshop 2026</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header>
-    <h1>Workshop 2026</h1>
-    <p>Exploring Innovative Research</p>
-</header>
+<header class="header">
 
-<nav>
-    <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#cfp">CFP</a></li>
-        <li><a href="#organizers">Organizers</a></li>
-    </ul>
+<div class="nav-container">
+
+<div class="logo-area">
+<img src="logo.png" class="logo">
+<span class="site-title">Workshop 2026</span>
+</div>
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+<nav class="navbar" id="navbar">
+
+<a href="#about">About</a>
+<a href="#cfp">CFP</a>
+<a href="#speakers">Speakers</a>
+<a href="#schedule">Schedule</a>
+<a href="#organizers">Organizers</a>
+<a href="#sponsors">Sponsors</a>
+
 </nav>
 
-<section id="home" class="section">
-    <h2>Home</h2>
-    <p>
-        Welcome to the Workshop 2026 website. This workshop brings together
-        researchers and practitioners to discuss emerging ideas and new directions.
-    </p>
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Workshop on Innovative Research 2026</h1>
+
+<p>
+Held with Major Conference 2026
+</p>
+
+<a class="hero-button" href="#cfp">Submit Paper</a>
+
+</div>
+
 </section>
+
 
 <section id="about" class="section">
-    <h2>About</h2>
-    <p>
-        The workshop focuses on interdisciplinary collaboration and knowledge
-        exchange. Participants will present research, share ideas, and discuss
-        future challenges in the field.
-    </p>
+
+<h2>About</h2>
+
+<p>
+This workshop brings together researchers and practitioners to discuss
+new directions and emerging research challenges. We aim to create
+a collaborative environment for sharing ideas and fostering
+interdisciplinary discussion.
+</p>
+
 </section>
 
-<section id="cfp" class="section">
-    <h2>Call for Papers</h2>
-    <p>
-        We invite submissions on topics related to the workshop theme.
-    </p>
 
-    <ul>
-        <li>Paper length: up to 8 pages</li>
-        <li>Submission deadline: TBD</li>
-        <li>Notification: TBD</li>
-    </ul>
+<section id="cfp" class="section alt">
 
-    <p>
-        Submit your papers via the submission system (link to be added).
-    </p>
+<h2>Call for Papers</h2>
+
+<p>
+We invite submissions describing original research or position papers.
+</p>
+
+<ul>
+<li>Paper length: 8 pages</li>
+<li>Submission deadline: June 1</li>
+<li>Notification: July 10</li>
+<li>Camera ready: August 1</li>
+</ul>
+
 </section>
+
+
+<section id="speakers" class="section">
+
+<h2>Invited Speakers</h2>
+
+<div class="speaker-grid">
+
+<div class="speaker-card">
+<img src="speaker1.jpg">
+<h3>Jane Doe</h3>
+<p>University A</p>
+</div>
+
+<div class="speaker-card">
+<img src="speaker2.jpg">
+<h3>John Smith</h3>
+<p>Institute B</p>
+</div>
+
+<div class="speaker-card">
+<img src="speaker3.jpg">
+<h3>Alex Lee</h3>
+<p>University C</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="schedule" class="section alt">
+
+<h2>Schedule</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span class="time">09:00</span>
+<div class="event">Opening Remarks</div>
+</div>
+
+<div class="timeline-item">
+<span class="time">09:30</span>
+<div class="event">Keynote Talk</div>
+</div>
+
+<div class="timeline-item">
+<span class="time">10:30</span>
+<div class="event">Coffee Break</div>
+</div>
+
+<div class="timeline-item">
+<span class="time">11:00</span>
+<div class="event">Paper Presentations</div>
+</div>
+
+</div>
+
+</section>
+
 
 <section id="organizers" class="section">
-    <h2>Organizers</h2>
 
-    <ul>
-        <li>Jane Doe — University A</li>
-        <li>John Smith — University B</li>
-        <li>Alex Lee — Institute C</li>
-    </ul>
+<h2>Organizers</h2>
+
+<ul class="organizer-list">
+<li>Jane Doe — University A</li>
+<li>John Smith — University B</li>
+<li>Alex Lee — University C</li>
+</ul>
+
 </section>
 
+
+<section id="sponsors" class="section alt">
+
+<h2>Sponsors</h2>
+
+<div class="sponsor-grid">
+
+<img src="sponsor1.png">
+<img src="sponsor2.png">
+<img src="sponsor3.png">
+
+</div>
+
+</section>
+
+
 <footer>
-    <p>© 2026 Workshop Name</p>
+
+<p>© 2026 Workshop Name</p>
+
 </footer>
+
+
+<script>
+
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.onclick = () => {
+nav.classList.toggle("show");
+};
+
+</script>
 
 </body>
 </html>
