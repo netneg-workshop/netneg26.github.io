@@ -1,54 +1,60 @@
-/* Container for the whole top bar */
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;         /* This puts Brand and UL on one line */
-    align-items: center;    /* Vertically centers them */
-    justify-content: flex-start; /* Keeps them left-aligned together */
-    padding: 0 2rem;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
 }
 
-/* The "NEXTGEN 2026" text */
-.brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-    margin-right: 3rem;    /* Adds space between the brand and the first link */
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 30px;
 }
 
-/* The list of links */
-.nav-links {
+nav {
+    background-color: #444;
+}
+
+.navbar {
     list-style: none;
-    display: flex;         /* Puts Home, About, etc. on one line */
-    gap: 1.5rem;           /* Space between individual links */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-links a {
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+    padding: 14px 20px;
     text-decoration: none;
-    color: #586069;
-    font-weight: 500;
-    white-space: nowrap;   /* Prevents links from wrapping to a second line */
+    color: white;
 }
 
-/* Mobile adjustments (keeps it tidy on small screens) */
-@media (max-width: 768px) {
-    .nav-container {
-        justify-content: space-between;
-    }
-    .nav-links {
-        display: none; /* Hide links on mobile until toggle is clicked */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #f8f9fa;
-        padding: 1rem 2rem;
-    }
-    .nav-links.show {
-        display: flex;
-    }
+.navbar a:hover {
+    background-color: #666;
+}
+
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    background: white;
+    margin-top: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
 }
