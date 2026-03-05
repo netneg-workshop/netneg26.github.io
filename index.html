@@ -3,59 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop Name 2026 — Call for Papers</title>
+    <title>eBPF'26 — Call for Papers</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="sidebar">
         <div class="sidebar-header">
-            <a href="index.html" class="logo">WORKSHOP'26</a>
+            <a href="index.html" class="brand">eBPF'26</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cfp.html" class="active">Call for Papers</a></li>
-            <li><a href="dates.html">Dates</a></li>
-            <li><a href="organizers.html">Organizers</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">Call for Papers</a></li>
+            <li><a href="#">Dates</a></li>
+            <li><a href="#">Organizers</a></li>
+            <li class="nav-divider">Past Workshops</li>
+            <li><a href="https://ebpf.github.io/2025/">eBPF'25</a></li>
+            <li><a href="https://ebpf.github.io/2024/">eBPF'24</a></li>
+            <li><a href="https://ebpf.github.io/2023/">eBPF'23</a></li>
         </ul>
-        <div class="sidebar-footer">
-            <p class="past-title">Past Workshops</p>
-            <ul class="past-links">
-                <li><a href="#">WORKSHOP'25</a></li>
-                <li><a href="#">WORKSHOP'24</a></li>
-            </ul>
-        </div>
     </nav>
 
     <main class="content">
-        <header class="content-header">
+        <header>
             <h1>Call for Papers</h1>
         </header>
 
-        <section class="body-text">
-            <p>The <strong>[Workshop Name]</strong> seeks to bring together researchers and practitioners to discuss the latest advancements in [Topic]. As [Topic] becomes increasingly critical for [Industry/Research], we face new challenges in performance, security, and scalability.</p>
+        <section>
+            <p>Kernel extensions are seeing a renewed interest in the research community with the advent of eBPF (extended Berkeley Packet Filter). eBPF has been gaining popularity in industry for its safety and efficiency in programming end-host network and OS stacks.</p>
             
-            <p>We welcome contributions including, but not limited to, the following topics:</p>
+            <p>The workshop will bring together a diverse and interdisciplinary audience to learn, network, and exchange ideas. We welcome contributions including, but not limited to:</p>
+            
             <ul>
-                <li>Innovative approaches to [Topic A]</li>
-                <li>Case studies and real-world deployments</li>
-                <li>Formal verification and safety of [Topic B]</li>
-                <li>Performance optimization techniques</li>
+                <li>Better approaches to eBPF program safety verification.</li>
+                <li>Emerging use cases in networking, security, and CPU scheduling.</li>
+                <li>Techniques to optimize performance of eBPF programs.</li>
+                <li>Security implications of kernel extensions.</li>
+                <li>Case studies and real-world deployments.</li>
             </ul>
+        </section>
 
+        <section>
             <h2>Submission Instructions</h2>
             <p>We are looking for two types of submissions:</p>
             <ul>
-                <li><strong>Research papers:</strong> Up to 6 pages (excluding references).</li>
-                <li><strong>Poster abstracts:</strong> Up to 2 pages, showcasing early-stage findings.</li>
+                <li><strong>Research papers:</strong> Up to 6 pages. Submissions must be original, unpublished work.</li>
+                <li><strong>Poster abstracts:</strong> Up to 2 pages. Designed for early-stage findings and works in progress.</li>
             </ul>
-            <p>Submissions must be original work and follow the <strong>ACM SIGCOMM formatting rules</strong>. All submissions are double-blind.</p>
-            
-            <div class="submission-cta">
-                <p>Please submit your papers via <a href="https://yourworkshop.hotcrp.com">HotCRP</a>.</p>
-            </div>
+            <p>Please submit your papers via <a href="https://ebpf26.hotcrp.com">ebpf26.hotcrp.com</a>.</p>
+        </section>
 
+        <section>
             <h2>Important Dates</h2>
             <table class="dates-table">
                 <thead>
@@ -73,18 +72,28 @@
                         <td>Author notification</td>
                         <td>July 24, 2026</td>
                     </tr>
-                    <tr class="highlight-row">
-                        <td>Workshop Date</td>
+                    <tr>
+                        <td>Camera-ready deadline</td>
+                        <td>August 7, 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Workshop</td>
                         <td>September 29, 2026</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <footer class="main-footer">
-            <p>Last updated on February 23, 2026.</p>
+        <footer>
+            <p>Last updated on March 5, 2026.</p>
         </footer>
     </main>
 
+    <script>
+        // Simple script to toggle mobile menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
