@@ -1,55 +1,52 @@
-/* Schedule Table Styling */
+/* Schedule Specific Styles */
 .schedule-table-wrapper {
-    margin-top: 30px;
-    overflow-x: auto; /* Ensures table is readable on mobile */
+    margin-top: 25px;
+    overflow-x: auto;
 }
 
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
 }
 
-.schedule-table th, 
-.schedule-table td {
+.schedule-table th, .schedule-table td {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 .schedule-table th {
     background-color: #2c3e50;
     color: white;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.schedule-table tr:hover {
-    background-color: #f9f9f9;
+    font-weight: 600;
 }
 
 .session-type {
     font-weight: bold;
     color: #3498db;
-    min-width: 150px;
+    width: 20%;
 }
 
 .keynote {
-    background-color: #ecf0f1; /* Highlights the keynote session */
+    background-color: #fcf8e3; /* Soft highlight for Keynote */
 }
 
-.schedule-table ul {
+.paper-list {
     list-style: none;
-    margin-top: 10px;
+    padding-left: 0;
+    margin-top: 8px;
 }
 
-.schedule-table ul li {
-    margin-bottom: 5px;
-    font-size: 0.95rem;
+.paper-list li {
+    font-size: 0.9rem;
+    padding: 3px 0;
+    border-top: 1px dashed #eee;
 }
 
-.schedule-table strong {
-    color: #2c3e50;
+.intro-text {
+    margin-bottom: 15px;
+    font-style: italic;
+    color: #666;
 }
