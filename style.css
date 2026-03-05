@@ -1,4 +1,8 @@
-/* Base Styles */
+/* Enable smooth scrolling when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
@@ -17,6 +21,7 @@ body {
     position: fixed;
     padding: 2rem 1rem;
     overflow-y: auto;
+    z-index: 1000;
 }
 
 .sidebar-header .brand {
@@ -47,19 +52,11 @@ body {
     font-size: 1rem;
     display: block;
     padding: 0.25rem 0;
+    transition: color 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     color: #0366d6;
-    font-weight: 500;
-}
-
-.nav-divider {
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: #959da5;
-    letter-spacing: 0.05rem;
 }
 
 /* Main Content Area */
@@ -69,31 +66,23 @@ body {
     max-width: 800px;
 }
 
+/* Ensure sections have enough padding for anchor links */
+section {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
+
 h1 {
     font-size: 2.5rem;
     border-bottom: 1px solid #eaecef;
     padding-bottom: 0.3em;
-    margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: 1.75rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     border-bottom: 1px solid #eaecef;
     padding-bottom: 0.3em;
-}
-
-p, ul {
-    margin-bottom: 1.25rem;
-}
-
-a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 /* Table Styling */
@@ -111,7 +100,6 @@ a:hover {
 
 .dates-table th {
     background-color: #f6f8fa;
-    font-weight: 600;
 }
 
 footer {
@@ -124,49 +112,19 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
+    body { flex-direction: column; }
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        position: sticky;
+        top: 0;
         padding: 1rem;
         border-right: none;
         border-bottom: 1px solid #e1e4e8;
     }
-
-    .sidebar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .sidebar-header .brand {
-        margin-bottom: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: 1px solid #ccc;
-        padding: 5px 10px;
-        cursor: pointer;
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        display: none;
-        margin-top: 1rem;
-    }
-
-    .nav-links.show {
-        display: block;
-    }
-
-    .content {
-        margin-left: 0;
-        padding: 2rem 1.5rem;
-    }
+    .sidebar-header { display: flex; justify-content: space-between; align-items: center; }
+    .menu-toggle { display: block; background: #fff; border: 1px solid #ddd; padding: 5px 10px; cursor: pointer; }
+    .nav-links { display: none; margin-top: 1rem; }
+    .nav-links.show { display: block; }
+    .content { margin-left: 0; padding: 1rem 1.5rem; }
 }
