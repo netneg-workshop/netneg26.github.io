@@ -75,6 +75,9 @@
           <div class="prog-entry">
             <div class="prog-title">False, Unknown, and the Scientific Value of Not Knowing</div>
             <div class="prog-authors"><strong>Fabian E. Bustamante</strong> <em>(Northwestern University)</em></div>
+            <div class="prog-actions">
+              <a class="prog-btn" href="slides/keynote-bustamante.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
           </div>
         </div>
       </div>
@@ -86,14 +89,38 @@
           <div class="prog-entry">
             <div class="prog-title">When the Crowd Doesn't Show Up: How Measurement Vantage Points Reveal (or Hide) Traffic Peaks During UEFA EURO 2024</div>
             <div class="prog-authors">Yasin Alhamwy <em>(University of Kassel)</em>, Oliver Hohlfeld <em>(University of Kassel)</em></div>
+            <div class="prog-actions">
+              <button type="button" class="prog-btn" aria-expanded="false">Abstract</button>
+              <a class="prog-btn" href="TODO-PDF-LINK" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a class="prog-btn" href="slides/alhamwy-euro2024.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+            <div class="prog-abstract" hidden>
+              <strong>Abstract:</strong> TODO: add abstract.
+            </div>
           </div>
           <div class="prog-entry">
             <div class="prog-title">Idle Periods in Ookla Speed Tests on Embedded Devices: A Cross-Layer Investigation</div>
             <div class="prog-authors">Ricky K. P. Mok <em>(CAIDA/UC San Diego)</em>, Ben Kosters <em>(Calvin University)</em>, Tanmay Nale <em>(UC San Diego)</em>, Rocky K. C. Chang <em>(Calvin University)</em></div>
+            <div class="prog-actions">
+              <button type="button" class="prog-btn" aria-expanded="false">Abstract</button>
+              <a class="prog-btn" href="TODO-PDF-LINK" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a class="prog-btn" href="slides/mok-ookla-idle-periods.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+            <div class="prog-abstract" hidden>
+              <strong>Abstract:</strong> TODO: add abstract.
+            </div>
           </div>
           <div class="prog-entry">
             <div class="prog-title">Lessons from an (Unsuccessful?) IPv6 Amplification Honeypot Deployment</div>
             <div class="prog-authors">Tiago Heinrich <em>(Max Planck Institute for Informatics)</em>, Sebastian Kappes <em>(Max Planck Institute for Informatics)</em>, Rafael Obelheiro <em>(Universidade do Estado de Santa Catarina (UDESC))</em></div>
+            <div class="prog-actions">
+              <button type="button" class="prog-btn" aria-expanded="false">Abstract</button>
+              <a class="prog-btn" href="TODO-PDF-LINK" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a class="prog-btn" href="slides/heinrich-ipv6-honeypot.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+            <div class="prog-abstract" hidden>
+              <strong>Abstract:</strong> TODO: add abstract.
+            </div>
           </div>
           <div class="prog-sub">2:35 – 2:45 – Paper Presenter Panel</div>
         </div>
@@ -109,6 +136,9 @@
           <div class="prog-entry">
             <div class="prog-title">(When) the path to negative results is paved with good intentions</div>
             <div class="prog-authors"><strong>Marwan Fayed</strong> <em>(Cloudflare and University of St Andrews)</em></div>
+            <div class="prog-actions">
+              <a class="prog-btn" href="slides/keynote-fayed.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
           </div>
         </div>
       </div>
@@ -120,10 +150,26 @@
           <div class="prog-entry">
             <div class="prog-title">Combo: Proactive Momentum and the Reactive Wall</div>
             <div class="prog-authors">Ghazal Abdollahi <em>(University of Utah)</em>, Hamid Asadi <em>(University of Utah)</em>, Robert Ricci <em>(University of Utah)</em></div>
+            <div class="prog-actions">
+              <button type="button" class="prog-btn" aria-expanded="false">Abstract</button>
+              <a class="prog-btn" href="TODO-PDF-LINK" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a class="prog-btn" href="slides/abdollahi-combo.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+            <div class="prog-abstract" hidden>
+              <strong>Abstract:</strong> TODO: add abstract.
+            </div>
           </div>
           <div class="prog-entry">
             <div class="prog-title">Mind the Generalization Gap: Lessons from Reproducing Research on Machine Learning for Wireless Networks</div>
             <div class="prog-authors">Lavesh Mangal <em>(New York University)</em>, Fraida Fund <em>(New York University)</em>, Shivendra Panwar <em>(New York University)</em></div>
+            <div class="prog-actions">
+              <button type="button" class="prog-btn" aria-expanded="false">Abstract</button>
+              <a class="prog-btn" href="TODO-PDF-LINK" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a class="prog-btn" href="slides/mangal-generalization-gap.pdf" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+            <div class="prog-abstract" hidden>
+              <strong>Abstract:</strong> TODO: add abstract.
+            </div>
           </div>
           <div class="prog-sub">4:10 – 4:20 – Paper Presenter Panel</div>
         </div>
@@ -310,6 +356,15 @@ window.addEventListener("scroll", () => {
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
+  });
+});
+// ABSTRACT TOGGLE
+document.querySelectorAll(".prog-actions button.prog-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const abs = btn.closest(".prog-entry").querySelector(".prog-abstract");
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!open));
+    abs.hidden = open;
   });
 });
 </script>

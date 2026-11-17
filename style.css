@@ -162,6 +162,39 @@ th {
 }
 
 
+.prog-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.prog-btn {
+  font: inherit;
+  font-size: 13px;
+  color: #333;
+  background: #f2f2f2;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  padding: 2px 12px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.prog-btn:hover,
+.prog-btn[aria-expanded="true"] {
+  background: #e4e4e4;
+}
+
+.prog-abstract {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #fafafa;
+  border-left: 3px solid #ddd;
+  font-size: 15px;
+  color: #333;
+}
+
+
 /* FOOTER */
 
 footer {
