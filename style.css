@@ -100,38 +100,65 @@ th {
 
 /* PROGRAM */
 
-table.program {
-  width: 100%;
+.program-info {
+  color: #555;
+  margin-bottom: 0;
 }
 
-table.program td {
-  vertical-align: top;
+.program-day {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-table.program td.time {
-  white-space: nowrap;
+.prog-item {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.prog-head {
+  background: #f2f2f2;
+  padding: 8px 14px;
   font-weight: 600;
-  color: #2c5aa0;
-  width: 1%;
 }
 
-table.program .slot {
-  margin: 8px 0 4px;
+.prog-break .prog-head {
+  background: #fafafa;
+  font-weight: normal;
   color: #555;
 }
 
-table.program ul.papers {
-  margin: 4px 0;
-  padding-left: 20px;
+.prog-body {
+  padding: 4px 14px 10px;
 }
 
-table.program ul.papers li {
-  margin-bottom: 6px;
-}
-
-table.program tr.break td {
-  background: #f5f7fb;
+.prog-sub {
+  margin: 10px 0 4px;
   color: #555;
+  font-size: 15px;
+}
+
+.prog-entry {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.prog-entry:last-child {
+  border-bottom: none;
+}
+
+.prog-title {
+  font-weight: 700;
+}
+
+.prog-authors {
+  color: #333;
+  font-size: 15px;
+}
+
+.prog-authors em {
+  color: #666;
 }
 
 
