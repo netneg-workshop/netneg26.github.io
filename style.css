@@ -98,6 +98,43 @@ th {
 }
 
 
+/* PROGRAM */
+
+table.program {
+  width: 100%;
+}
+
+table.program td {
+  vertical-align: top;
+}
+
+table.program td.time {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #2c5aa0;
+  width: 1%;
+}
+
+table.program .slot {
+  margin: 8px 0 4px;
+  color: #555;
+}
+
+table.program ul.papers {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+
+table.program ul.papers li {
+  margin-bottom: 6px;
+}
+
+table.program tr.break td {
+  background: #f5f7fb;
+  color: #555;
+}
+
+
 /* FOOTER */
 
 footer {
